@@ -1,0 +1,21 @@
+[user]
+  name = Aaron Hayden
+  email = ahayden@users.noreply.github.com
+  username = ahayden
+[include]
+  path = ~/.config/git.signingkey
+[core]
+  editor = vim
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = ~/.config/git/excludes
+[push]
+  default = matching
+[diff]
+  tool = vimdiff
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[commit]
+  gpgsign = true
