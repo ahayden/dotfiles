@@ -111,5 +111,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-eval `ssh-agent -s`; [ -f ~/.ssh/github ] && ssh-add ~/.ssh/github
+#eval `ssh-agent -s`; [ -f ~/.ssh/github ] && ssh-add
 export GPG_TTY=$(tty)
+export LIBVIRT_DEFAULT_URI="qemu:///system"
