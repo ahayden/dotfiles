@@ -9,12 +9,12 @@ defmonitor on
 activity 'Activity in window %n'
 caption always
 hardstatus alwayslastline
-# window list, time
+# window list with braces, time
 caption string '%{= kg}[%{= kw}%-w%n*%t%+w%=%{g}][%{+b b}%m/%d %C%a%{g}]'
-# backtick output
+# backtick output with braces
 hardstatus string '%{= kg}[%{+b b}%?%9`%?%= %{g}]'
 deflog on
-logfile $HOME/logs/%m%d-%c-%t%n.screenlog
+logfile $HOME/logs/screenlog.%m-%d_%0c_%n
 logfile flush 5
 logtstamp on
 logtstamp after 300
